@@ -6,11 +6,12 @@ const images = [
     "images/img-5.jpeg"
 ];
 let imageIndex = 0;
+const imgElement = document.getElementById("slider-img");
 setInterval(() => {
     if (imageIndex >= images.length) {
         imageIndex = 0;
     }
     const imgUrl = images[imageIndex];
-    console.log(imgUrl)
+    imgElement.setAttribute("src", imgUrl);
     imageIndex++;
 }, 1000)
